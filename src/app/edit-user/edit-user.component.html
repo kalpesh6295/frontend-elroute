@@ -1,0 +1,28 @@
+<div class="sigu_up_form">
+    <div class="signup_elemnents">
+      <div class="form_header"><h2>Edit Details</h2></div>
+      <div class="form_body" >
+      <form #Edit="ngForm" (submit)="onEdit(Edit)">
+        <ul>
+        <li><input type="text"  [(ngModel)]="authService.user.UserName"  name="UserName" #username="ngModel"
+          required [class.invalid-text]= "username.invalid && username.touched">
+          <small *ngIf="username.invalid && username.touched">User Name is required</small>
+        </li>
+        <li><input type="email" [(ngModel)]="authService.user.Email"  name="Email" placeholder="Enter Your Email" #email="ngModel" required
+          [class.invalid-text]= "email.invalid && email.touched">
+          <small *ngIf="email.invalid && email.touched">Email is required</small></li>
+        <!-- <li><input type="password" [(ngModel)]="authService.user.Password"  name="Password" placeholder="Enter Your Password" #password="ngModel"
+          required [class.invalid-text]= "password.invalid && password.touched">
+          <small *ngIf="password.invalid && password.touched">Email is required</small>
+        </li> -->
+        <!-- <li><input type="text"  name="location" placeholder="Enter Your Location" #location="ngModel"></li> -->
+        <!-- <li><input type="text"  name="title" placeholder="Enter Your Title" #title="ngModel"></li> -->
+        <li><div class="btn1"><button type="submit">Save Changes</button></div></li>
+      </ul>
+      </form>
+      </div>
+      </div>
+      </div>
+
+
+

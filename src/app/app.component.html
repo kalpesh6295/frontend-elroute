@@ -1,0 +1,9 @@
+<header>
+  <app-main-header *ngIf="!token"></app-main-header>
+  <app-other-header *ngIf="token"></app-other-header>
+</header>
+<body><router-outlet></router-outlet></body>
+<!---<footer>
+  <app-footer></app-footer>
+</footer>
+-->

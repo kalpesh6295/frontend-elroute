@@ -1,0 +1,31 @@
+<div class="profile">
+  <small (click)="onEdit()">Edit User</small>
+  <div class="profile_image">
+   <img src="../../assets/images/user.jpg">
+  </div>
+  <div class="basic_deatils">
+    <h3>{{username}}</h3>
+    <h4>Co-Founder,<span><small>India</small></span></h4>
+  </div>
+  <div class="user_bio">
+   <p>
+      Even when everything is perfect, you can always make it better. Break barriers in your head, create something crazy and don't forget Code is Poetry...
+   </p>
+  </div>
+  <div class="social_media">
+    <ul>
+      <li>Social1</li>
+      <li>Social2</li>
+      <li>Social3</li>
+      <li>Social4</li>
+    </ul>
+  </div>
+  <div class="creat">
+    <button  *ngIf="!companyId" routerLink="/company_form">Create Your World</button>
+    <button  *ngIf="companyId" routerLink="/company_profile">Go To Company</button>
+    <button style="margin-top:40px;"(click)="onLogout()">LOGOUT</button>
+    
+  </div>
+
+</div>
+

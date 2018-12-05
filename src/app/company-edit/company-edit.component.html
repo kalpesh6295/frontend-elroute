@@ -1,0 +1,100 @@
+<form [formGroup]="companyForm" (ngSubmit)="SubmitonEdit()">
+  <mat-vertical-stepper  #stepper>
+      <mat-step label="I am" [stepControl]="firstFormGroup" >
+          <div>
+               <div class="company_type">
+                 <div class="checkbox">
+                    <mat-radio-button class="radio" matStepperNext (click)="onComapny()" >Company</mat-radio-button>
+                    <mat-radio-button class="radio" (click)="onService()" matStepperNext>Service</mat-radio-button>
+  
+  
+                 </div>
+                 <!-- <button mat-button mat-raised-button matStepperNext class="btn">Next</button> -->
+               </div>
+               
+            </div>
+      </mat-step>
+      <mat-step label="Basic Details" [stepControl]="secondFormGroup">
+        <div class="form">
+          <div class="form_body_left">
+          <label  *ngIf="!this.service">Company Name</label>
+          <label  *ngIf="this.service" >Company Name</label>
+          <input type="text" formControlName="companyName" name="companyName"> 
+  
+          <!-- <label>Email Id</label>
+          <input type="email" formControlName=""> -->
+  
+          <!-- <label>Contact </label>
+          <input type="text" formControlName=""> -->
+  
+          <label  *ngIf="!this.service">Company Bio</label>
+          <label  *ngIf="this.service">Service Bio</label>
+          <textarea formControlName="shortIntro" name="shortIntro"></textarea>
+          </div>
+          <!-- <div class="form_body_right">
+           <label> Select Profile Photo</label>
+           <input type="file" name="myFile">
+              <label>Alternate Email Id</label>
+          <input type="email" formControlName="">
+  
+          <label>Alternate Contact </label>
+          <input type="text" formControlName="">
+          </div> -->
+        </div>
+          <div>
+            <!-- <button mat-raised-button matStepperPrevious class="btn">Back</button>
+            <button mat-raised-button matStepperNext class="btn">Next</button> -->
+          </div>
+      </mat-step>
+      <mat-step label="Address Information" [stepControl]="firstFormGroup">
+        <div>
+            <div class="form">
+                <div class="form_body_left">
+                <label>Address</label>
+                <input type="text" formControlName="address" name="address">
+  
+  
+                </div>
+  
+              </div>
+              <div>
+                  <!-- <button mat-raised-button matStepperPrevious class="btn">Back</button>
+                  <button mat-raised-button matStepperNext class="btn">Next</button> -->
+                </div>
+        </div>
+      </mat-step>
+      <mat-step label="Company Information" [stepControl]="firstFormGroup">
+          <div>
+              <div class="form">
+                  <div class="form_body_left">
+                  <label>Company Type</label>
+                  <input type="text" formControlName="companyType" name="companyType">
+  
+                  <!-- <label>Company Type</label>
+                  <label  *ngIf="!this.service">Service Type</label>
+                  <input type="email" formControlName="companyType"> -->
+  
+                  <label>Employe Size</label>
+                  <input type="number" formControlName="employeeSize" name="employeeSize">
+  
+                  <label>Company Website</label>
+                  <input type="text" formControlName="website" name="website">
+                  </div>
+                  <!-- <div class="form_body_right">
+                      <label  *ngIf="!this.service">Industry </label>
+                      <label  *ngIf="this.service">Service Industry</label>
+                      <input type="text" formControlName="">
+  
+                  </div> -->
+                </div>
+                <div>
+                    <button mat-raised-button matStepperPrevious class="btn">Back</button>
+                    <button mat-raised-button matStepperNext class="btn"*ngIf="!this.service" type="submit" >Create Company</button>
+                    <button mat-raised-button matStepperNext class="btn"*ngIf="this.service" type="submit" >Create Service</button>
+                  </div>
+          </div>
+        </mat-step>
+  
+    </mat-vertical-stepper>
+  </form>
+  

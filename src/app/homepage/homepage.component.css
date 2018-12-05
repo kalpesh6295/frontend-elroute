@@ -1,0 +1,136 @@
+section {
+	width:60%;
+	height: 100vh;
+	position: relative;
+	/*border-right: 1px solid #999999;*/
+	margin: 0 auto;
+}
+button{
+  letter-spacing: 3px;
+  color: #f1f1f1;
+  font-weight: 600 !important;
+  box-shadow: 0px 6px 11px rgba(0,0,0,0.4);
+   font-family: Verdana;
+  font-size: 12px;
+  line-height: 1.5;
+  transition-duration: .5s;
+  transition-delay: .1s;
+
+}
+button:hover{
+box-shadow: 0px 1px 2px 0 rgba(46,61,73,.15);
+}
+.homepage_right_body{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.homepage_vedio{
+	width: 60%;
+	height: 35%;
+	position: relative;
+	top: 34%;
+	left: 50%;
+	transform: translate(-50%,-60%);
+}
+.homepage_vedio video{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: none;
+
+}
+
+.search_box{
+	width: 85%;
+	height: 15%;
+	position: relative;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-60%);
+}
+.search_box input{
+	width: 100%;
+	height: 50%;
+	border: 1px solid #555;
+	border-radius: 3px;
+	padding: 20px;
+	outline: #02b3e4!important;
+	 font-family: Verdana;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.search_box .search_btn{
+	margin: 0 auto;
+	width: 60%;
+	margin-top: 2%;
+}
+.search_box .search_btn button{
+	width: 43%;
+	height: 40px;
+	text-transform: uppercase;
+	border:none;
+	background-color:  #02b3e4!important;
+	margin-right: 20px;
+	margin-top: 6px;
+	cursor: pointer;
+	font-size: 14px;
+}
+.search_tabs{
+	width: 100%;
+  height: 7.5%;
+  margin: 0 auto;
+	position: relative;
+	top: 31%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+  align-content: center;
+
+}
+.tab{
+	width: 18%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+
+	margin-right: 2%;
+}
+.tab h4{
+	vertical-align: middle;
+	padding: 10px;
+	margin: 0;
+  font-weight: 100;
+  font-size: 11px;
+
+}
+.tab button{
+	width: 100%;
+	height: 100%;
+    text-transform: uppercase;
+    border: 1px solid #e9385a!important;
+    background-color: #e9385a!important;
+    cursor: pointer;
+}
+.txt{
+	width: 18%;
+	height: 6%;
+	/*background-color:#605eca!important;*/
+	margin: 0 auto;
+	position: relative;
+	top: 34.5%;
+	border-bottom: 2px solid  #e9385a;
+}
+.txt h3{
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	padding: 13px;
+	color: #333333;
+	font-weight: 300;
+}
+a{
+   color: #ffffff;
+   text-decoration: none;
+}

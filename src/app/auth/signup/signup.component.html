@@ -1,0 +1,37 @@
+<div class="sigu_up_form">
+  <div class="signup_elemnents">
+    <div class="form_header"><h2>Sign up with us...</h2></div>
+    <div class="form_body" >
+    <form #signup="ngForm" (submit)="onSubmit(signup)">
+      <ul>
+      <li><input type="text"  [(ngModel)]="authService.user.UserName" placeholder="Enter Your Name" name="UserName" #username="ngModel"
+        required [class.invalid-text]= "username.invalid && username.touched">
+        <small *ngIf="username.invalid && username.touched">User Name is required</small>
+      </li>
+      <li><input type="email" [(ngModel)]="authService.user.Email"  name="Email" placeholder="Enter Your Email" #email="ngModel" required
+        [class.invalid-text]= "email.invalid && email.touched">
+        <small *ngIf="email.invalid && email.touched">Email is required</small></li>
+        
+       <!--- <li><input type="number" [(ngModel)]="authService.user.mobile"  name="mobile" placeholder="Enter Your Mobile Number" #mobile="ngModel" required
+          [class.invalid-text]= "mobile.invalid && mobile.touched">
+          <small *ngIf="mobile.invalid && mobile.touched">Mobile is required</small></li>
+       -->
+      <li><input type="password" [(ngModel)]="authService.user.Password"  name="Password" placeholder="Enter Your Password" #password="ngModel"
+        required [class.invalid-text]= "password.invalid && password.touched">
+        <small *ngIf="password.invalid && password.touched">Email is required</small>
+      </li>
+      <!-- <li><input type="text"  name="location" placeholder="Enter Your Location" #location="ngModel"></li> -->
+      <!-- <li><input type="text"  name="title" placeholder="Enter Your Title" #title="ngModel"></li> -->
+      <li><div class="btn1"><button type="submit">Sign Up</button></div></li>
+    </ul>
+    </form>
+    </div>
+    <div class="form_footer">
+      <div class="btn btn2"><a href="#" ><button>Google</button></a></div>
+      <div class="btn btn3"><a href="#"> <button>LinkedIn</button></a></div>
+    </div>
+    <div class="login_element" >
+      <a (click)="onLogin()">Already have an Account</a>
+    </div>
+  </div>
+  </div>

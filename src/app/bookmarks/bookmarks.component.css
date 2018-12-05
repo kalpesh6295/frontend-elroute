@@ -1,0 +1,38 @@
+.tab_list{
+  width: 40%;
+ position: fixed;
+ top: 15%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ z-index: 1000;
+ box-shadow: 0 1px 20px 0 rgba(46,61,73,.2);
+}
+ ul {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+li{
+  width: 33.333333%;
+
+}
+button{
+  width: 100%;
+  padding: 10px;
+  background-color: #02b3e4;
+  border: none;
+  cursor: pointer;
+  border-right: 1px solid  aliceblue;
+  color: aliceblue;
+text-transform: uppercase;
+font-size: 15px;
+letter-spacing: .0625rem;
+}
+li:hover{
+  background-color: #051937;
+}
+button:checked{
+  background-color: #051937;
+}
+

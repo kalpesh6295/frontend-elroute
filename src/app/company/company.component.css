@@ -1,0 +1,98 @@
+.company{
+  width: 75%;
+  min-height: 100vh;
+  margin: 0 auto;
+  margin-top: 6%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.company-card{
+  height: 210px;
+  width: 58%;
+  margin: 20px auto;
+  display: flex;
+  border: 0.0625rem solid #e3dddd;
+  border-radius: 2px;
+}
+.company-img{
+  position: absolute;
+  width: 7%;
+  height: 13%;
+  border-radius: 50%;
+  transform: translate(-30%, -15%);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+}
+.company-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.left{
+  width: 13%;
+  height: 100%;
+}
+.right{
+  width: 60%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+.company-name{
+  width: 100%;
+  height: 40px;
+}
+.company-name h2{
+  margin-top: 2px;
+}
+.location{
+  width: 60%;
+  height: 20px;
+  margin-top: 5px;
+}
+.location p{
+  text-transform: capitalize;
+  font-size: 12px;
+}
+.location p span{
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-left: 2px;
+}
+.company-title{
+  width: 60%;
+  height: 20px;
+  margin-top: 5px;
+}
+.company-title p{
+  font-size: 12px;
+}
+.company-intro{
+  width: 100%;
+  height: 45%;
+  margin-top: 15px;
+  padding-right: 5px;
+}
+.company-intro p{
+  font-size: 13px;
+  overflow: hidden;
+}
+.side-btn{
+  width: 23%;
+  height: 100%;
+  margin: 1% 5%;
+}
+.btn{
+  width: 100%;
+  height: 20%;
+}
+.btn2{
+  margin-top: 78%;
+}
+.btn button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  letter-spacing: 2px;
+  background-color: #3e3e3f;
+ font-weight: 600;
+ color: whitesmoke
+}

@@ -1,0 +1,25 @@
+
+
+<div 
+  fxLayout="row wrap" 
+  fxLayout.lt-sm="column" 
+  fxLayoutGap="32px" 
+  fxLayoutAlign="flex-start">
+<ng-container *ngFor="let r of mydata">
+  <mat-card class="example-card" fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.lt-sm="100%">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{r.companyName}}</mat-card-title>
+    </mat-card-header>
+     <mat-card-content>
+          <p>Company Type:{{r.companyType}}</p>
+          <p>Location:{{r.location}}</p>
+          <p>Website:{{r.website}}</p>
+          <p>Category:{{r.category}}</p>
+    </mat-card-content>
+    
+  </mat-card>
+</ng-container>
+
+</div>
+

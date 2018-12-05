@@ -1,0 +1,113 @@
+<div class="Company_profile">
+  <div class="header">
+    <div class="header_image">
+    <img src="../../assets/images/company.jpg">
+    </div>
+    <div class="profile_details">
+      <div class="profile_image">
+          <img src="../../assets/images/logo.jpg">
+      </div>
+      <div class="folloing">
+        <h4>343 Following</h4>
+        <button>Follow Us</button>
+      </div>
+
+      <div class="details">
+        <div class="side-nav">
+         <ul>
+           <li (click)="showPage1()">About</li>
+           <li (click)="showPage2()">Feeds</li>
+           <li (click)="showPage4()">Vedio Review</li>
+           <li (click)="showPage4()">Know More</li>
+         </ul>
+        </div>
+        <div class="details-section">
+         <div class="section section1" *ngIf="tab1">
+
+             <div class="field">
+                <label>Name</label>
+                <h2>Service Provider</h2>
+               </div>
+
+               <div class="field">
+                  <label>Location</label>
+                  <h4>Jaipur India</h4>
+                 </div>
+                 <div class="field">
+                    <label>Email</label>
+                    <h4>Sidhant@naturaldyes.in</h4>
+                   </div>
+                   <div class="field">
+                      <label>Introduction</label>
+                      <p>We at "Sodhani Biotique" are passionate about exploring the Natural way of Life; We stand for an idea of being eco-fabulous: With environment as an inspiration and nature as our guide, a way of life which is the most in harmony with our natural ecosystem.</p>
+                     </div>
+
+                     <div class="field">
+                        <label>Website</label>
+                         <a>naturaldyes.in</a>
+                       </div>
+
+                       <div class="field">
+                          <label>Contact No.</label>
+                           <a>9764323789</a>
+                         </div>
+
+                         <div class="field">
+                            <label>Go Social</label>
+                             <a>facebook</a>
+                             <a>LinkedIn</a>
+                             <a>Twitter</a>
+                           </div>
+
+         </div>
+         <div class="section section2" *ngIf="tab2">
+            <h1>Section 2</h1>
+          </div>
+          <div class="section section3" *ngIf="tab3">
+<div class="product">
+  <div class="product-card">
+    <div class="product-header">
+      <div class="product-img">
+        <img src="../../assets/images/product-card.jpg">
+      </div>
+    </div>
+      <div class="product-body">
+        <div class="company">
+          <div class="company-img">
+           <img src="../../assets/images/logo.jpg">
+          </div>
+          <div class="company-name">
+            <p>Sodhani Biotiques</p>
+          </div>
+        </div>
+        <div class="product-name">
+          <p>Product name goes here</p>
+        </div>
+        <div class="location">
+          <p>jaipur,<span>india</span></p>
+        </div>
+        <div class="description">
+            <p>the short description of the product will be here to get us some idea about the product</p>
+          </div>
+      </div>
+      <div class="product-footer">
+          <div class="btn btn1">
+           <button>Edit</button>
+          </div>
+          <div class="btn btn2">
+              <button style="background-color: firebrick;">Delete</button>
+          </div>
+        </div>
+  </div>
+</div>
+
+            </div>
+            <div class="section section4" *ngIf="tab4">
+                <h1>Section 4</h1>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

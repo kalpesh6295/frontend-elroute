@@ -1,0 +1,54 @@
+
+<!---
+<div class="container">
+    <div class="column">
+    <div class="post-module"><br><br>
+     <form [formGroup]="feedForm" (ngSubmit)="onSubmit()">
+       <div class="form-group">
+         <label for="my-input"></label>
+         <textarea name="content" id="" cols="40" rows="5" placeholder="Write Something" formControlName="content">
+         </textarea>
+       </div>
+       <input type="file" (change)="insertImage($event)" accept="image/*">
+       <button class="btn btn-primary" type="submit">Post </button>
+     </form>
+   </div>
+ </div>
+</div>
+
+<div mat-dialog-content>
+<div class="content">
+    <form [formGroup]="feedForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="my-input"></label>
+          <textarea name="content" id="" cols="60" rows="10" placeholder="Write Something" formControlName="content">
+          </textarea>
+        </div>
+        <br>
+        <img id="blah" [src]="imageSrc" alt="your image" height="100" width="100"/>
+        <input type="file" (change)="insertImage($event)" accept="image/*">
+        <button class="btn btn-primary" type="submit" (click)="GotoFeedPage()">Post </button>
+      </form>
+</div>
+</div>
+-->
+
+<div mat-dialog-content class="postImage">
+  <div id="post">
+        <form [formGroup]="feedForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="my-input"></label>
+        <textarea name="content"  cols="50" rows="5" placeholder="Write Something" formControlName="content">
+        
+        </textarea>
+      </div>
+      <br>
+      <input type="file" (change)="insertImage($event)" accept="image/*">
+      <button class="btn btn-primary" type="submit">Post </button>
+    </form>
+  </div>
+  <br>
+  <div class="imagepreview">
+    <img id="preview" *ngIf="imageSrc" [src]="imageSrc"/>
+  </div>
+</div>

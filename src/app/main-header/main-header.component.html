@@ -1,0 +1,20 @@
+<header>
+	<div class="page_header" detect-scroll (onScroll)="handleScroll($event)" [bottomOffset]="100">
+		<div class="header_lanuage_btn"><button>Language</button></div>
+    <div class="logo"></div>
+    <div class="search" *ngIf="showHeader">
+        <input type="search" name="" placeholder="Search">
+        <button>Product</button>
+        <button>Service</button>
+      </div>
+		<div class="nav_link">
+			<nav>
+       <div class="nav bookmark" *ngIf="!token"><a (click)="onLogin()">Bookmarks</a></div>
+       <div class="nav bookmark" *ngIf="token" routerLink= '/bookmark' ><a>Bookmarks</a></div>
+      <div class="nav login" *ngIf="!token"><a (click)=" openDialog()">Login</a></div>
+      <div class="nav login" *ngIf="token"><a (click)="showUser()">User</a></div>
+			<div class="nav help">Help</div>
+		</nav>
+		</div>
+	</div>
+</header>

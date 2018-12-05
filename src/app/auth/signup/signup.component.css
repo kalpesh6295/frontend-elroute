@@ -1,0 +1,122 @@
+.sigu_up_form{
+	width: 100%;
+	height: 67vh;
+	/* margin: 0 auto;
+	margin-top: 10%;
+	border: 1px solid #333;
+	border-radius: 6px 6px 3px 3px;
+	box-shadow: 0 1px 2px 2px rgba(25,25,25,0.2); */
+}
+.signup_elemnents{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.form_header{
+	width: 60%;
+	height: 10%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+.form_header h2{
+	margin: 0 auto;
+	font-weight: 100;
+}
+.form_body{
+	width: 100%;
+	height: 60%;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: 100%;
+}
+li{
+	width: 80%;
+	margin: 0 auto;
+	padding: 8px;
+
+}
+ input{
+	width: 100%;
+	height: 5vh;
+	outline: none;
+  font-family: Verdana;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-left: none;
+}
+.btn1{
+	width: 60%;
+	height: 5vh;
+	margin: 0 auto;
+}
+.btn1 button{
+	width: 100%;
+	height:100%;
+	border: none;
+
+
+}
+button{
+	 font-weight: 600 !important;
+	 font-family: Verdana;
+	 background-color:  #02b3e4;
+	 cursor: pointer;
+}
+.form_footer{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+}
+
+.btn{
+	width: 40%;
+	height: 40%;
+	margin: 0 auto;
+}
+.btn button{
+	height: 100%;
+	width: 100%;
+	border: none;
+	color: #ffffff;
+	background-color: #222222;
+}
+select{
+	width: 100%;
+	height:  40px;
+	border:1px solid #ccc;
+	border-right: none;
+	border-left: none;
+	margin-top: 10px;
+}
+label{
+	font-size: 12px;
+	margin-bottom: 20px !important;
+}
+.login_element{
+  width: 28.5vh;
+  height: 5%;
+   margin: 0 auto;
+   text-align: center;
+  }
+.login_element a{
+color: #222222;
+text-decoration: none;
+margin-top: 40px;
+padding: 10px;
+cursor: pointer;
+}
+.invalid-text{
+  border: 1px solid red;
+  border-right: none;
+  border-left: none;
+}
+small{
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}

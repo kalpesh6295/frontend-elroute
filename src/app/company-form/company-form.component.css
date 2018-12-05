@@ -1,0 +1,43 @@
+.checkbox{
+  padding: 40px;
+}
+.radio{
+  margin-right: 40px;
+}
+.form{
+  width: 40%;
+  display: flex;
+}
+.form_body_left{
+  width: 50%;
+}
+.form_body_right{
+  width: 50%;
+  height: 40vh;
+  margin-left: 40px;
+}
+label{
+  width: 100%;
+  font-size: 12px;
+  padding: 5px;
+
+}
+input{
+  width: 95%;
+  height: 4vh;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+textarea{
+  width: 90%;
+  height: 15vh;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.btn{
+  margin-right: 30px;
+  background-color: navy;
+  color: whitesmoke;
+  cursor: pointer;
+}
