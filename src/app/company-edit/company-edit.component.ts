@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CompanyEditComponent implements OnInit {
   
   companyForm: FormGroup;
+  companyId
   constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService,
   private _formBuilder: FormBuilder, public authService: AuthService,private route:ActivatedRoute,public router:Router) { }
   
@@ -20,7 +21,10 @@ export class CompanyEditComponent implements OnInit {
     this.authService.user.UserName = this.storage.get('UserName');
     this.authService.user.Email = this.storage.get('email');
     console.log ( this.authService.user.Email);
-     
+    this.route.queryParams.subscribe(params=>{
+     this.companyId=params.id;
+      console.log(this.companyId)
+   })
     this.companyForm=this._formBuilder.group({
       companyName:'',
       shortIntro:'',
@@ -45,9 +49,9 @@ export class CompanyEditComponent implements OnInit {
 
   }
   SubmitonEdit(){
-    console.log(this.companyForm.value);
+  //  console.log(this.companyForm.value);
    var companyForm = this.companyForm.value;
-   this.authService.OneditCompany(companyForm).subscribe(res => {
+   this.authService.OneditCompany(companyForm,this.companyId).subscribe(res => {
       console.log(JSON.parse(res['_body']));
       this.storage.set('companyName',JSON.parse(res['_body']).companyName);
      this.storage.set('location',JSON.parse(res['_body']).location);
@@ -55,8 +59,7 @@ export class CompanyEditComponent implements OnInit {
      this.storage.set('website',JSON.parse(res['_body']).website);
      this.storage.set('shortIntro',JSON.parse(res['_body']).shortIntro);
      this.storage.set('employeeSize',JSON.parse(res['_body']).employeeSize);
-     this.storage.set('companyType',JSON.parse(res['body']).companyType);
-     
+       
    });
   // this.router.navigate(['/company_profile']);
   }

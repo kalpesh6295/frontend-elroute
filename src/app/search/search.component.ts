@@ -16,7 +16,6 @@ export class SearchComponent implements OnInit {
 
     
    }
-  
 
  mydata:any[]=[]
     ngOnInit() {
@@ -24,8 +23,7 @@ export class SearchComponent implements OnInit {
    this.authService.searchResult(params.q).subscribe(results=>{
      this.mydata=results.json();
          // console.log(params.q);
-          console.log(this.mydata);  
-
+          console.log(this.mydata); 
    })
   })
 }

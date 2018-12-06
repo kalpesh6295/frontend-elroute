@@ -31,14 +31,7 @@ website:''
 conatact:''
 id:''
   constructor(@Inject(LOCAL_STORAGE) private storage:WebStorageService,  public authservice:AuthService, public router: Router,public dialog: MatDialog,public route:ActivatedRoute ) { 
-     $(function(){
-    $(document).scroll(function(){
-        $('#wrapper').stop().animate({
-            scrollTop : $(this).scrollTop()
-        });            
-    });
-});
-
+    
 }
   
 
@@ -51,6 +44,7 @@ id:''
     this.location= this.authservice.company.location=JSON.parse(res['_body']).companies[0].location;
      this.shortIntro= this.authservice.company.shortIntro=JSON.parse(res['_body']).companies[0].shortIntro;
     this.website= this.authservice.company.website=JSON.parse(res['_body']).companies[0].website;
+    this.id=this.authservice.company._id=JSON.parse(res['_body']).companies[0]._id;
    
    })
   
@@ -90,7 +84,7 @@ getFeed(){
 
  
 gotoEditPage(){
- this.router.navigate(['/company-edit']);
+ this.router.navigate(['/company-edit'],{queryParams:{id:this.id}});
 
 }
 

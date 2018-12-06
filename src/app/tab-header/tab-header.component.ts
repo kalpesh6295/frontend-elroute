@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
+import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
 
 @Component({
   selector: 'app-tab-header',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabHeaderComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private authService:AuthService,private router:Router,@Inject(LOCAL_STORAGE) private storage:WebStorageService) { }
+token
   ngOnInit() {
+    this.authService.token = this.storage.get('token');
+
   }
 
+  
+   
+  
 }

@@ -53,10 +53,10 @@ export class AuthService {
     return this.http.get('http://localhost:3000/company',{headers: headers});
   }
 
-  OneditCompany(company){
+  OneditCompany(company,id){
     const headers=new Headers();
     headers.append('x-auth',this.token);
-    return this.http.patch('http://localhost:3000/company/update/id',company, {headers: headers});
+    return this.http.patch('http://localhost:3000/company/update/'+id,company, {headers: headers});
   }
 
   searchResult(query){
