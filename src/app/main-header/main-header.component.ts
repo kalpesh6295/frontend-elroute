@@ -15,6 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MainHeaderComponent implements OnInit {
 showHeader = false;
 token;
+searchResult:''
 public href: string = "";
   constructor(public dialog: MatDialog, @Inject(LOCAL_STORAGE) private storage:WebStorageService, private route:ActivatedRoute,private router:Router) { }
 username:''
@@ -52,5 +53,6 @@ username:''
   this.dialog.open(UserProfileComponent, dialogConfig);
   }
 
+  
 }
 

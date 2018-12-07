@@ -50,7 +50,8 @@ export class PostFeedComponent implements OnInit {
   this.authService.token = this.storage.get('token');
     this.authService.user.UserName = this.storage.get('UserName');
     this.authService.user.Email = this.storage.get('email');
-    
+    // console.log(this.storage.get('token'))
+    // console.log(this.storage.get('UserName'))
   }
 
   onSubmit(){

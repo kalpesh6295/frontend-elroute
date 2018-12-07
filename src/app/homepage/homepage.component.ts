@@ -34,11 +34,6 @@ token;
       let result=params[this.searchResult];
       console.log(result);
     })
-
-
-
   }
   
- 
-
 }

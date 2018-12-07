@@ -89,12 +89,17 @@ export class AuthService {
     headers.append('x-auth',this.token);
     return this.http.get('http://localhost:3000/user/followers', {headers: headers});
   }
-  GetServices(type){
+  GetSearchServices(type){
     const headers=new Headers();
     headers.append('x-auth',this.token);
     return this.http.get('http://localhost:3000/service/'+type, {headers: headers});
  
   }
+GetServices(){
+  const headers=new Headers();
+  headers.append('x-auth',this.token);
+  return this.http.get('http://localhost:3000/service/', {headers: headers});
+}
   GetProduct(){
     const headers=new Headers();
     headers.append('x-auth',this.token);
@@ -105,5 +110,9 @@ export class AuthService {
     headers.append('x-auth',this.token);
     return this.http.patch('http://localhost:3000/bookmark', {headers: headers});
   }
-  
+  AddNewProduct(product){
+    const headers= new Headers()
+    headers.append('x-auth',this.token);
+    return this.http.post('http://localhost:3000/product',product, {headers: headers})
+  }
 }

@@ -11,19 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ServiceCardComponent implements OnInit {
 
   sevicesquery:any
-  constructor(private authService:AuthService,@Inject(LOCAL_STORAGE) private storage: WebStorageService,private route:ActivatedRoute,private router:Router) { }
+  constructor(private authService:AuthService,@Inject(LOCAL_STORAGE) private storage: WebStorageService,private route:ActivatedRoute,private router:Router,private authservice:AuthService) { }
   
   ngOnInit() {
-    this.authService.token = this.storage.get('token');
-    this.authService.user.UserName = this.storage.get('UserName');
-    this.authService.user.Email = this.storage.get('email');
-    this.route.queryParams.subscribe(params=>{
-      this.authService.GetServices(params.q).subscribe(results=>{
-       console.log(results)
-      })
-     })
-     
- 
+   
   }
 
 }

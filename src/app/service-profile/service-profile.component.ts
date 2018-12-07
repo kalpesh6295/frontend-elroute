@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit ,Inject} from '@angular/core';
+import { AuthService} from '../services/auth.service';
+import {WebStorageService,LOCAL_STORAGE } from 'angular-webstorage-service';
+import {ActivatedRoute} from '@angular/router'
+import { from } from 'rxjs';
 @Component({
   selector: 'app-service-profile',
   templateUrl: './service-profile.component.html',
@@ -11,9 +14,10 @@ export class ServiceProfileComponent implements OnInit {
   tab2 = false;
   tab3 = false;
   tab4 = false;
-    constructor() { }
+    constructor(private authService:AuthService,@Inject(LOCAL_STORAGE) private storage: WebStorageService,private route:ActivatedRoute,private authservice:AuthService) { }
 
     ngOnInit() {
+    
     }
   showPage1() {
   this.tab1 = true;

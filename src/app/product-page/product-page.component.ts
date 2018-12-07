@@ -9,13 +9,18 @@ import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
 })
 export class ProductPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService :AuthService,@Inject(LOCAL_STORAGE) private storage:WebStorageService) { }
 img1 = true;
 img2;
 img3;
   ngOnInit() {
     
-  
+    this.authService.token = this.storage.get('token');
+    this.authService.user.UserName = this.storage.get('UserName');
+    this.authService.user.Email = this.storage.get('email');
+  this.authService.GetProduct().subscribe(res=>{
+    console.log(res);
+  })
   }
 onSelectImg1() {
 this.img1 = true;
